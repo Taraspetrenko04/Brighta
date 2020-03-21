@@ -1,0 +1,189 @@
+@font-face {
+    font-family: Montserrat; /* Имя шрифта */
+    src: url('../font/Montserrat/Montserrat-Medium.ttf'); /* Путь к файлу со шрифтом */
+   }
+
+  
+
+.container{
+    width: 1920px;
+    margin: 0 auto;
+    background-color: #F0F6FC;
+    font-family: Montserrat;
+    font-style: normal;
+    display: flex;
+    padding: 101px 38px 0px 38px;
+}
+
+/* SideBar */
+.expert{
+    background-color: #ffff;
+    width: 236px;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+.expert__drop{
+    width: 177px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    box-shadow: 0px 10px 40px rgba(128, 158, 191, 0.2);
+    border-radius: 10px;
+}
+.expert__text{
+    display: inline-block;
+    margin-left: 20px;
+}
+.expert__arrow{
+    margin-right: 24px;
+}
+.expert__bread{
+    margin-right: 19px;
+}
+
+
+.categories{
+    background-color: #FFFF;
+    width: 158px;
+    padding: 9px 9px 9px 10px;
+    box-shadow: 0px 10px 40px rgba(128, 158, 191, 0.2);
+    border-radius: 10px;
+}
+.categories-item{
+    height: 85px;
+    border: 1px solid #E7ECF1;
+    box-sizing: border-box;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.categories-item:not(:nth-child(1)){
+    margin-top: 8px;
+}
+
+.categories-item:hover{
+    border-color: #FF7439;
+    color: #FF7439;
+}
+.categories-item:hover svg{
+    fill: #FF7439;
+}
+.categories-text{
+    margin-top: 12px;
+}
+
+/* Content */
+.content{
+    width: 1269px;
+    margin-left: 104px;
+}
+
+.pannel{
+    background-color: #ffff;
+    width: 100%;
+    height: 85px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.pannel__wraper{
+    display: flex;
+}
+.filter{
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+    cursor: pointer;
+}
+.filter:hover svg{
+    fill: #FF7439;
+}
+.filter:hover p{
+    color: #FF7439;
+}
+
+.filter__text{
+    margin-left: 20px;
+    margin-right: 8px;
+}
+.pannel__btn{
+    height: 45px;
+    padding: 11px 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.btn-black{
+    border: 2px solid #000000;
+}
+.btn-black:hover{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+.btn-orange{
+    background-color: #FF7439;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-left: 11px;
+    margin-right: 21px;
+}
+.btn-orange:hover{
+    background-color: #F16E36;
+}
+.active-btn{
+    fill: #FF7439;
+    color: #FF7439;
+    border-color: #FF7439;
+}
+
+/* Contacts */
+.contacts{
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0px 21px 0px 32px;
+}
+.hide{
+    display: none;
+}
+.contacts__table{
+    width: 100%;
+}
+
+.contacts__row:nth-child(1){
+    box-sizing: border-box;
+    border-bottom: 1px solid #E7ECF1;
+    padding: 24px 0px 22px 0px;
+}
+.contacts__row{
+    display: flex;
+}
+th.contacts__cell{
+    font-weight: bold;
+    text-align: left;
+}
+.contacts__cell{
+    width: 25%;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right, #000000, rgb(255, 255, 255));
+}
+
