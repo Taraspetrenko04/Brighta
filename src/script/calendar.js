@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 const icon = document.querySelector('.calendar');
 const pannel = document.querySelector('.pannel__modal');
 
