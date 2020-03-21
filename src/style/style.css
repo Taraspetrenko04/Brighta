@@ -13,6 +13,7 @@
     font-style: normal;
     display: flex;
     padding: 101px 38px 0px 38px;
+    
 }
 
 /* SideBar */
@@ -96,6 +97,33 @@
     align-items: center;
     justify-content: space-between;
 }
+/* Modal */
+.pannel__modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 246, 252, 0.7);
+    /* top: -100%; */
+    -webkit-transition: all 700ms;
+    transition: all 700ms;
+    opacity: 0;
+    z-index: -1;
+    
+}
+.active-mod{
+    opacity: 1;
+    z-index: 5;
+    /* top: 0; */
+}
+.pannel__content{
+    background-color: palegreen;
+    width: 400px;
+    height: 400px;
+    left: 343px;
+    top: 171px;
+    position: relative;
+}
+/* /Modal */
 .pannel__wraper{
     display: flex;
 }
