@@ -3,6 +3,22 @@
     src: url('../font/Montserrat/Montserrat-Medium.ttf'); /* Путь к файлу со шрифтом */
    }
 
+   /* DatePicker */
+   .ui-datepicker .selected-start:not(.selected-end) a,
+.ui-datepicker .selected-end:not(.selected-start) a {
+  background: #F3FDD5;
+}
+
+.ui-datepicker .selected.first-of-month:not(.selected-start) a {
+  border-left: 2px dotted #D4E7F6;
+  padding-left: 1px;
+}
+
+.ui-datepicker .selected.last-of-month:not(.selected-end) a {
+  border-right: 2px dotted #D4E7F6;
+  padding-right: 1px;
+}
+/* /DatePicker */
   
 
 .container{
@@ -97,8 +113,11 @@
     align-items: center;
     justify-content: space-between;
 }
+
+
 /* Modal */
 .pannel__modal{
+    font-family: Montserrat;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -108,22 +127,73 @@
     transition: all 700ms;
     opacity: 0;
     z-index: -1;
-    
 }
 .active-mod{
     opacity: 1;
     z-index: 5;
     /* top: 0; */
 }
-.pannel__content{
-    background-color: palegreen;
-    width: 400px;
-    height: 400px;
+.modal__content{
+    display: flex;
+    width: fit-content;
     left: 343px;
     top: 171px;
     position: relative;
 }
-/* /Modal */
+.modal__range{
+    width: 176px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 10px 40px rgba(128, 158, 191, 0.2);
+    border-radius: 10px;
+    padding: 19px 10px 19px 10px;
+    margin-right: 8px;
+}
+.modal__item{
+    padding: 10px 5px 7px 14px;
+    border-radius: 5px;
+    line-height: 19px;
+    font-size: 14px;
+    border: 2px solid #ffff;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.modal__item:hover{
+    border: 2px solid #EBEEF3;
+}
+.modal__active{
+    background-color: #F0F3F8;
+}
+.modal__buttons{
+    background-color: #ffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.modal__button{
+    font-size: 12px;
+    cursor: pointer;
+    width: 130px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+.modal__button-orange{
+    background-color: rgba(255, 116, 57, 0.5);
+    color: rgb(255, 255, 255);
+}
+.modal__button-orange:hover{
+    background-color:#F16E36;
+}
+.modal__button--active{
+    background-color:#FF7439;
+}
+/* </ Modal> */
+
+
 .pannel__wraper{
     display: flex;
 }
@@ -135,6 +205,7 @@
 }
 .filter:hover svg{
     fill: #FF7439;
+    transform: rotate(180deg);
 }
 .filter:hover p{
     color: #FF7439;
@@ -214,4 +285,7 @@ th.contacts__cell{
     background-clip: text;
     background-image: linear-gradient(to right, #000000, rgb(255, 255, 255));
 }
+
+
+
 

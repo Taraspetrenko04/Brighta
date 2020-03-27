@@ -4,20 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--https://api.jqueryui.com-->
+    <link rel="stylesheet" href="./src/jqueryUi/jquery-ui.structure.css">
+    <link rel="stylesheet" href="./src/jqueryUi/jquery-ui.css">      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="all"
+      href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css"/>
+    <script src="./src/jqueryUi/jquery.js"></script>
+    <script src="./src/jqueryUi/jquery-ui.js"></script>
+    <script type="text/javascript" src="./src/jqueryUi/jquery.ui.datepicker-ru.js"></script><!--Russian-->
+    <script type="text/javascript" src="./src/jqueryUi/jquery.datepicker.extension.range.min.js"></script><!--Extensions Range-->
 
     <link rel="stylesheet" href="./src/style/reset.css">
     <link rel="stylesheet" href="./src/style/style.css">
 </head>
 <body>
     <div class="pannel__modal">
-        <div class="pannel__content">
-
+            <div class="modal__content">
+                    <div class="modal__range">
+                        <ul class="modal__list">
+                            <li class="modal__item" data-range="all">Весь срок</li>
+                            <li class="modal__item" data-range="today">Сегодня</li>
+                            <li class="modal__item" data-range="yesturday">Вчера</li>
+                            <li class="modal__item" data-range="last 30 days">Последние 30 дней</li>
+                            <li class="modal__item" data-range="this month">В этом месяце</li>
+                            <li class="modal__item" data-range="last month">Прошлый месяц</li>
+                        </ul>
+                    </div>
+                    <div class="modal__calendar">
+                        <div id="date_range"></div>
+                        <div class="modal__buttons">
+                            <div class="modal__button btn-black modal__cancel">Отмена</div>
+                            <div class="modal__button modal__button-orange">Обновить</div>
+                        </div>
+                    </div>
+                    
+                    
+            </div>
         </div>
     </div>
+
     <div class="container">
-
-       
-
          <!-- SideBar -->
         <div class="side-bar">
             <div class="expert">
@@ -184,7 +211,7 @@
                             <path d="M19.1002 13.7H17.2002V15.7H19.1002V13.7Z" />
                         </svg>
                         <p class="filter__text">За 1 день</p>
-                        <svg width="11" height="6" viewBox="0 0 11 6">
+                        <svg class="filter__arrow" width="11" height="6" viewBox="0 0 11 6">
                             <path
                                 d="M5.5 6C5.21552 6 5.02591 5.91178 4.83625 5.7353L0.284483 1.50002C-0.0948276 1.14708 -0.0948276 0.617647 0.284483 0.264706C0.663793 -0.0882353 1.23278 -0.0882353 1.61209 0.264706L5.5 3.88239L9.38791 0.264706C9.76722 -0.0882353 10.3362 -0.0882353 10.7155 0.264706C11.0948 0.617647 11.0948 1.14708 10.7155 1.50002L6.16375 5.7353C5.97409 5.91178 5.68965 6 5.5 6Z" />
                         </svg>
