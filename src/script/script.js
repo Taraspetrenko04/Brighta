@@ -36,7 +36,7 @@ cancel.addEventListener('click', () => {
 refresh.addEventListener('click', () => {
     toggleModal();
 })
-function toggleModal(){
+function toggleModal() {
     pannel.classList.toggle('active-mod');
 }
 
@@ -183,7 +183,7 @@ document.getElementsByClassName('modal__refresh')[0].addEventListener('click', (
             showRange(rangeFrom, rangeTo);
         }
         //         return new Date(convertFormatData(user.registrationDate)) >= new Date('2020-03-02') && new Date(convertFormatData(user.registrationDate)) <= new Date('2020-03-27')
-        
+
 
 
 
@@ -203,22 +203,21 @@ document.getElementsByClassName('modal__refresh')[0].addEventListener('click', (
         }
 
 
-        function showRange(rangeFrom='', rangeTo=''){
+        function showRange(rangeFrom = '', rangeTo = '') {
             document.getElementsByClassName('pannel__range')[0].classList.remove('hide');
             let text = document.querySelector('.pannel__range--text');
-            if ( !rangeTo ){
+            if (!rangeTo) {
                 text.innerText = rangeFrom;
-            }else{
-//вывести коректно формат
-                text.innerText = 'Fistashka'
+            } else {
+                let fromMonth = new Date(rangeFrom).toLocaleString('ru', { month: 'long' });
+                let fromDay = new Date(rangeFrom).getDate();
+                let toYear = new Date(rangeTo).getFullYear();
+                let toMonth = new Date(rangeTo).toLocaleString('ru', { month: 'long' }).substring(0, 3);
+                let toDay = new Date(rangeTo).getDate();
+
+                text.innerText = `${fromDay} ${fromMonth} - ${toDay} ${toMonth} ${toYear}`
             }
-            
-            // showRange.addEventListener('click', () => {
-            //     console.log('hi')
-            // });
-            //         //  let date = new Date();
-//         //  let month = new Date().toLocaleString('ru', { month: 'long' });
-//         //  console.log(month[0].toUpperCase()+month.slice(1) + ' ' + date.getDay() + ', ' + date.getFullYear() )
+
         }
 
 
@@ -229,66 +228,12 @@ document.getElementsByClassName('modal__refresh')[0].addEventListener('click', (
 })
 
 
+//Отправка
 
-//         function checkDateEntrance(date, period) {
-
-
-            // let rusDate = "Декабрь 10, 2020"; // => 2020-03-10
-            // function convertFormatData(date){
-            //     const arrMonth=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь', 'Октябрь','Ноябрь','Декабрь'];
-            //     // let newRuDate = rusDate.toLowerCase().replace(/[,]/g, "").split(' ');
-            //     let newDate = date.replace(/[,]/g, "").split(' ');
-            //     arrMonth.forEach( (month, index) => {
-            //         if( newDate[0] == month ){
-            //             newDate[0] = index + 1 ;
-            //             return newDate;
-            //         }
-            //     })
-            //     newDate = newDate[2] + '-' + newDate[0]  + '-'  + newDate[1];
-            //     return newDate
-            // } 
-            // console.log(  )
-
-
-
-
-//             // let options = {
-//             //     year: "numeric",
-//             //     month: "long",
-//             //     day: "numeric"
-//             //   }
-//             // console.log(new Date().toLocaleDateString("ru-RU", options));
-
-
-//             //перевести date  в формат 2017-04-01
-//             let periods = period.split(',');
-//             //console.log(periods) ["2017-04-01", "2020-04-27"]
-//             // console.log(new Date(periods[0]))
-//             // console.log(new Date( Date.parse("2017-04-01") ))
-
-
-
-//             if (new Date( convertFormatData(rusDate) ) >= new Date(periods[0]) && date <= new Date(periods[1]))
-//               console.log('УРА!');
-//             else
-//               console.log('ЖАЛЬ :(');
-//           }
-
-//           checkDateEntrance(new Date(), '2017-04-01,2020-04-27');
-
-
-
-//     }
-//     catch (err) {
-//         alert('Ошибка ' + err.name);
-//     }
-
-
-//  })
-
-
-//  function getRange( lastDay ){
-
-
-//     // return new Table sort
-//  }
+// let response = fetch(URL, {
+//     method: 'POST',
+//     body: JSON.stringify(users)
+//   });
+  
+//   let result = response.json();
+//   alert(result.message);
